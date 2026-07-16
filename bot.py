@@ -1,7 +1,7 @@
- from telegram import Update
+from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-TOKEN = 8993269375:AAHdCqxkVzPh1gBaMYlS27rY7Mh62y95wbE
+TOKEN = "8993269375:AAHdCqxkVzPh1gBaMYlS27rY7Mh62y95wbE"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
@@ -21,5 +21,4 @@ app = Application.builder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("btc", btc))
 
-print("TickerSage AI is running...")
 app.run_polling()
