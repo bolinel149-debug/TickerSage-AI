@@ -1,5 +1,5 @@
-from telegram.ext import
-    (Application,
+(from telegram.ext import
+    Application,
     CommandHandler,
     ContextTypes)
 
