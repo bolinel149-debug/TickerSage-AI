@@ -1,8 +1,7 @@
-from telegram.ext import (
-    Application,
+from telegram.ext import
+    (Application,
     CommandHandler,
-    ContextTypes,
-)
+    ContextTypes)
 
 TOKEN = "8993269375:AAHdCqxkVzPh1gBaMYlS27rY7Mh62y95wbE"
 
@@ -12,13 +11,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Commands:\n"
         "/start - Start the bot\n"
         "/btc - Show BTC analysis (coming soon)"
-    )
-
 async def btc(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "📊 BTC analysis module is under development."
-    )
-
+        "📊 BTC analysis module is under development.")
 app = Application.builder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
